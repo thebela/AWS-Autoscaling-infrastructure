@@ -1,0 +1,6 @@
+flowchart TD
+A[User] --> B[ALB]
+B --> C1[EC2 Instance 1 in ASG]
+B --> C2[EC2 Instance 2 in ASG]
+C1 -->|CPU High| D[ASG Scales Out]
+C2 -->|CPU Low| E[ASG Scales In]
